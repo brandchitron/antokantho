@@ -1,0 +1,204 @@
+/* বেসিক সেটআপ */
+:root {
+    --primary: #6a3093;
+    --secondary: #a044ff;
+    --text: #333;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --border: #e1e1e1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hind Siliguri', sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+    background-color: #f5f5f7;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* হেডার স্টাইল */
+.main-header {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+/* ইউজার মেনু */
+.user-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 10px;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    padding: 10px 0;
+    min-width: 150px;
+    display: none;
+}
+
+.user-menu:hover .dropdown {
+    display: block;
+}
+
+.dropdown a {
+    display: block;
+    padding: 8px 15px;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+    background: var(--light);
+}
+
+/* কবিতা কার্ড */
+.feed {
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.poem-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.poem-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.author-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.author-name {
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.author-name:hover {
+    color: var(--primary);
+}
+
+.poem-date {
+    font-size: 13px;
+    color: #777;
+    display: block;
+    margin-top: 2px;
+}
+
+.poem-content {
+    padding: 0 15px 15px;
+}
+
+.poem-content h3 {
+    margin-bottom: 10px;
+}
+
+.poem-content h3 a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.poem-content h3 a:hover {
+    color: var(--primary);
+}
+
+.poem-content p {
+    color: #555;
+    white-space: pre-line;
+}
+
+.poem-actions {
+    display: flex;
+    border-top: 1px solid var(--border);
+    padding: 10px 15px;
+}
+
+.poem-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+.poem-actions button i {
+    margin-right: 5px;
+}
+
+.like-btn.liked {
+    color: var(--primary);
+}
+
+/* রেস্পন্সিভ ডিজাইন */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .feed {
+        margin: 20px auto;
+    }
+    
+    .poem-card {
+        border-radius: 0;
+        margin-bottom: 15px;
+        box-shadow: none;
+        border-bottom: 1px solid var(--border);
+    }
+}
