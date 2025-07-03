@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/var/www/html/data
+      - ./assets:/var/www/html/assets
+    environment:
+      - APACHE_PORT=8080
