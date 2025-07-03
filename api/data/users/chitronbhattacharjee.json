@@ -1,0 +1,9 @@
+{
+    "username": "chitronbhattacharjee",
+    "password": "Y2hpdHJvbkAyNDQ4NzY2",
+    "email": "admin@example.com",
+    "is_admin": true,
+    "verified": true,
+    "created_at": 1750624542,
+    "profile_pic": "assets\/images\/default-profile.png"
+}
